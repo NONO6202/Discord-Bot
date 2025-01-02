@@ -1,5 +1,6 @@
 # Discord_Bot(.심리 상담사)
 **해당 봇은 친구들의 음성 데이터셋을 확보하기 위해 만들졌습니다.**
+사용하기 쉽도록 하나의 파이썬 파일로 뭉쳐놨습니다.
 
 ---
 ## 사용을 위해 .env파일에 Client Secret key, OpenAI API key, Gemini API key를 작성해야합니다.
