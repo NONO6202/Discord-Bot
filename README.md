@@ -14,6 +14,9 @@
 
 구글 드라이브 파일 ID를 바꿔줘야 합니다.
 
+![image](https://github.com/user-attachments/assets/4291c0b2-fc6c-4fea-b6f4-9e2f02bee035)
+
+
 ![image](https://github.com/user-attachments/assets/d7e8b739-0dfd-41de-bfe6-cc8c05318523)
 
 이런 형식으로 구글 드라이브에 업로드가 됩니다.
