@@ -10,7 +10,7 @@
 
 또한 스트리밍 녹음을 위해서는 Google OAuth 2.0 클라이언트정보가 담긴 json이 필요하며
 
-[Google OAuth 2.0를 위함 링크](https://console.cloud.google.com/apis/credentials?inv=1&invt=AblxRA&project=velvety-glyph-297514)
+[Google OAuth 2.0를 위한 링크](https://console.cloud.google.com/apis/credentials?inv=1&invt=AblxRA&project=velvety-glyph-297514)
 
 구글 드라이브 파일 ID를 바꿔줘야 합니다.
 
@@ -18,7 +18,7 @@
 
 이런 형식으로 구글 드라이브에 업로드가 됩니다.
 
-스트리밍 녹을을 원치 않으시면 Not Stream_record를 쓰시면 됩니다.
+스트리밍 녹음을 원치 않으시면 Not Stream_record를 쓰시면 됩니다.
 
 ---
 ## 부수적으로 TTS기능과 LLM 기능을 추가 하였습니다.
@@ -29,7 +29,7 @@
   
 - !를 사용하여 말을 중단 시키거나, TTS기능을 수행 안 시킬수 있습니다.
 > !앞의 내용을 중단 시키고 송신자의 이름을 발설 안합니다.
-> 해당 말은 TTS를 사용 안 합니다!
+> 해당 말은 TTS 사용 안 합니다!
 
 - <>를 사용하여 TTS에 색다르게 꾸밀수 있습니다.
 > 1. <2.0>이렇게 숫자를 넣으면 <0.5>속도가 조절이 됩니다.
