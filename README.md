@@ -12,6 +12,10 @@
 
 구글 드라이브 파일 ID를 바꿔줘야 합니다.
 
+![image](https://github.com/user-attachments/assets/d7e8b739-0dfd-41de-bfe6-cc8c05318523)
+
+이런 형식으로 구글 드라이브에 업로드가 됩니다.
+
 스트리밍 녹을을 원치 않으시면 Not Stream_record를 쓰시면 됩니다.
 
 ---
