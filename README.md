@@ -41,10 +41,12 @@
 > ![image](https://github.com/user-attachments/assets/062465be-59a3-44b6-9695-799b4be23f0c)
 > ![image](https://github.com/user-attachments/assets/3157748a-f195-45f7-ad9e-5bcb8c5e3803)
 > ![image](https://github.com/user-attachments/assets/ca3396bd-730c-4ec5-b9de-b2dcd8f8c095)
+>
 > 이런 형식으로 저장 및 사용 할 수 있습니다.
 
 - 사진을 올리면 설명을 해줍니다.
 > ![image](https://github.com/user-attachments/assets/0e9c0e9c-52ad-4ecf-9a65-c66ca8c12a0a)
+>
 > 이런 형식으로 Gemini가 짧은 분석을 하고 TTS로 답변을 해줍니다.
 
 #### - LLM기능
