@@ -12,10 +12,9 @@
 
 [Google OAuth 2.0를 위한 링크](https://console.cloud.google.com/apis/credentials?inv=1&invt=AblxRA&project=velvety-glyph-297514)
 
-구글 드라이브 파일 ID를 바꿔줘야 합니다.
-
 ![image](https://github.com/user-attachments/assets/4291c0b2-fc6c-4fea-b6f4-9e2f02bee035)
 
+구글 드라이브 파일 ID를 바꿔줘야 합니다.
 
 ![image](https://github.com/user-attachments/assets/d7e8b739-0dfd-41de-bfe6-cc8c05318523)
 
