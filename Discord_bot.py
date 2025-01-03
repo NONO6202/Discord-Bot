@@ -548,7 +548,7 @@ async def on_ready():
         tts_queue[guild.id] = []
         tts_running[guild.id] = False
         people[guild.id] = [['None', 'ko', False]]
-        stream_channel[guild.id] = []
+        stream_channel[guild.id] = None
         streamAudio_buffer[guild.id] = {}
         
     for guild in guild_Dict:
@@ -596,9 +596,11 @@ async def on_message(message):
         # queue
         if message.author.voice:
             if client.voice_clients == []:
-                stream_channel[guild_id] = await message.author.voice.channel.connect(cls=voice_recv.VoiceRecvClient)
-                stream_channel[guild_id].listen(Stream_Sink(guild_id))
-                
+                if message.content[0:2] == '??':
+                    stream_channel[guild_id] = await message.author.voice.channel.connect(cls=voice_recv.VoiceRecvClient)
+                    stream_channel[guild_id].listen(Stream_Sink(guild_id))
+                    print("스트리밍")
+                else: await message.author.voice.channel.connect()
             voice = client.voice_clients[0]
 
             # message.content[-1] == '\0'
@@ -995,18 +997,19 @@ async def on_voice_state_update(member, before, after):
     global former_person, tts_queue, stream_channel
     voice_state = member.guild.voice_client
     guild_id = member.guild.id
-    if not before.channel and after.channel and member.id != client_id:
-        try:
-            stream_channel[guild_id].stop_listening()
-            await asyncio.sleep(0.1)
-            stream_channel[guild_id].listen(Stream_Sink(guild_id))
-        except: pass
-    elif before.channel and not after.channel and member.id != client_id:
-        try:
-            stream_channel[guild_id].stop_listening()
-            await asyncio.sleep(0.1)
-            stream_channel[guild_id].listen(Stream_Sink(guild_id))
-        except: pass
+    if stream_channel[guild_id] != None:
+        if not before.channel and after.channel and member.id != client_id:
+            try:
+                stream_channel[guild_id].stop_listening()
+                await asyncio.sleep(0.1)
+                stream_channel[guild_id].listen(Stream_Sink(guild_id))
+            except: pass
+        elif before.channel and not after.channel and member.id != client_id:
+            try:
+                stream_channel[guild_id].stop_listening()
+                await asyncio.sleep(0.1)
+                stream_channel[guild_id].listen(Stream_Sink(guild_id))
+            except: pass
     if voice_state is None:
         former_person[guild_id] = None
         tts_queue[guild_id] = []
