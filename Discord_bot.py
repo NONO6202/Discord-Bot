@@ -768,7 +768,7 @@ async def assignment_role(interaction: discord.Interaction, roles: str):
     try:
         guild_id = interaction.guild.id
         role[guild_id][0] = roles
-        role[guild_id][1] = await interaction.original_response()
+        role[guild_id][1] = interaction.original_response()
         Current_model = current_model[guild_id]
         if Current_model == GPT_model_name:
             history_messages[guild_id] = history_messages[guild_id][:1]
