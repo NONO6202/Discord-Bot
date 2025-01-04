@@ -669,12 +669,14 @@ async def assignment_role(interaction: discord.Interaction, roles: str):
     global role
     try:
         guild_id = interaction.guild.id
-        role[interaction.guild.id][0] = roles
-        role[interaction.guild.id][1] = await interaction.original_response()
+        role[guild_id][0] = roles
+        role[guild_id][1] = await interaction.original_response()
         Current_model = current_model[guild_id]
-        if Current_model == Gemini_model_name:
+        if Current_model == GPT_model_name:
+            history_messages[guild_id] = history_messages[guild_id][:1]
+        elif Current_model == Gemini_model_name:
             Gemini_model = AIchat_relation(Current_model,guild_id).Gemini_instruction(role[guild_id][0])
-            history_messages[guild_id] = Gemini_model.start_chat(history=history_messages[guild_id])
+            history_messages[guild_id] = Gemini_model.start_chat(history=[])
         await interaction.response.send_message(f'"{roles}",역할 부여 완료')
     except:
         await interaction.response.send_message('권한 및 기타 오류')
