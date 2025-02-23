@@ -1,0 +1,26 @@
+# Ubuntu 22.04.5 LTS
+# Python 3.10
+
+sudo apt update
+sudo apt install python3-pip
+sudo apt-get install tmux
+
+pip3 install filetype
+pip3 install beautifulsoup4
+pip3 install discord.py
+pip3 install discord-ext-voice-recv
+pip3 install python-dotenv
+pip3 install openai
+pip3 install google
+pip3 install google-genai
+pip3 install gtts
+pip3 install google_auth_oauthlib
+pip3 install numpy
+pip3 install librosa
+pip3 install pydub
+pip3 install samplerate
+pip3 install tiktoken
+pip3 install google-api-python-client
+
+sudo apt-get install python3-pyaudio
+sudo apt install ffmpeg
